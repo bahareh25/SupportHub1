@@ -24,7 +24,7 @@ public class Ticket
     public Agent? AssignedAgent { get; set; }
 
     public ICollection<TicketComment> Comments { get; set; } = new List<TicketComment>();
-    public ICollection<TicketTag> Tags { get; set; }= new List<TicketTag>();
+    public ICollection<TicketTag> TicketTags { get; set; } = new List<TicketTag>();
 
     /// <summary>
     /// The status machine: Open -> InProgress -> Resolved -> Closed.
