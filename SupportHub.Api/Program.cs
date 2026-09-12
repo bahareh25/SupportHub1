@@ -14,6 +14,8 @@ public class Program
         builder.Services.AddControllers();
         // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
         builder.Services.AddOpenApi();
+        // RFC 9457 Problem Details: structured, machine-readable error bodies.
+        builder.Services.AddProblemDetails();
         builder.Services.AddInfrastructure(builder.Configuration);
         var app = builder.Build();
 
