@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SupportHub.Domain.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Text;
@@ -12,7 +13,7 @@ public record TicketCommentDto(
     int? AuthorAgentId,
     DateTime CreatedAtUtc)
 {
-    public static TicketCommentDto From(TicketCommentDto comment) => new(
+    public static TicketCommentDto From(TicketComment comment) => new(
         comment.Id,
         comment.TicketId,
         comment.Body,
