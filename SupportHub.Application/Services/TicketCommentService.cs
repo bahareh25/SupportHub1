@@ -9,13 +9,13 @@ using System.Text;
 
 namespace SupportHub.Application.Services;
 
-public class TagCommentService : ITicketCommentService
+public class TicketCommentService : ITicketCommentService
 {
    
     private IApplicationDbContext _db;
     private ILogger _logger;
 
-    public TagCommentService(IApplicationDbContext db, ILogger logger)
+    public TicketCommentService(IApplicationDbContext db, ILogger<TicketCommentService> logger)
     {
         _db = db;
         _logger = logger;
